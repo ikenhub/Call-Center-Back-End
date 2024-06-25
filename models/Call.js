@@ -1,4 +1,3 @@
-// models/Call.js
 const mongoose = require('mongoose');
 
 const callSchema = new mongoose.Schema({

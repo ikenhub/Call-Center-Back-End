@@ -21,7 +21,7 @@ app.use(cors()); // Use cors middleware
 app.post('/register', userController.createUser);
 app.post('/login', authController.login);
 app.get('/users', userController.getUsersByRole);
-app.get('/users/:id', userController.getUserById); // New route to fetch user by ID
+app.get('/users/:id', userController.getUserById); 
 
 // Call Routes
 app.post('/calls', callController.createCall);
@@ -36,7 +36,7 @@ app.get('/tickets', ticketController.getTickets);
 app.get('/tickets/:id', ticketController.getTicketById);
 app.get('/calls/:callId/tickets', ticketController.getTicketsByCallId);
 app.post('/tickets/:ticketId/comments', ticketController.addCommentToTicket);
-app.get('/tickets/:ticketId/comments', ticketController.getTicketComments); // Route for fetching comments
+app.get('/tickets/:ticketId/comments', ticketController.getTicketComments); 
 
 // Notification Routes
 app.post('/notifications', notificationController.createNotification);
