@@ -4,7 +4,7 @@ exports.createCall = async (req, res) => {
     try {
         const call = new Call(req.body);
         await call.save();
-        res.status(201).json(call); // Respond with the saved call object
+        res.status(201).json(call);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -12,7 +12,7 @@ exports.createCall = async (req, res) => {
 
 exports.getCalls = async (req, res) => {
     try {
-        const { agentId } = req.query; // Extract agentId from query parameters
+        const { agentId } = req.query;
         let query = {};
 
         if (agentId) {

@@ -1,4 +1,3 @@
-// controllers/notification.js
 const Notification = require('../models/Notification');
 
 exports.createNotification = async (req, res) => {
